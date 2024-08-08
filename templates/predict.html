@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+
+    <h1>Prediction Result</h1>
+    
+    {% if prediction is defined %}
+        <p>
+            The predicted Iris species is: <strong>{{ prediction }}</strong>
+        </p>
+    {% elif error is defined %}
+        <p style="color: red;">
+            <strong>{{ error }}</strong>
+        </p>
+    {% endif %}
+    
+    <p>
+        <a href="/">Back to Home</a>
+    </p>
+
+</body>
+</html>
